@@ -21,6 +21,9 @@ class BookSeeder extends Seeder
             "city" => "Cianjir",
             "cover" => "public/cover.jpg",
             "bookshelf_id" => 1
-        ]);
+        ],
+        
+       
+    );
     }
 }

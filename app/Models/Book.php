@@ -2,9 +2,26 @@
 
 namespace App\Models;
 
+use App\Models\Bookshelf;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Book extends Model
 {
-    //
+
+    public $fillable = [
+        'title',
+        'author',
+        'year',
+        'publisher',
+        'city',
+        'cover',
+        'bookshelf_id',
+
+        
+    ];
+    public function bookshelf() :  BelongsTo{
+        return $this->belongsTo(Bookshelf::class);
+
+    }
 }
